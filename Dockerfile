@@ -1,8 +1,8 @@
 FROM ubuntu
 
-RUN apt update
-RUN apt install -y python3 python3-pip nano
-RUN pip3 install flask
+RUN apt update && \
+    apt install -y python3 python3-pip nano && \
+    pip3 install flask
 
 COPY app.py /opt/app.py
 
